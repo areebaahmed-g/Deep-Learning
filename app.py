@@ -1,10 +1,10 @@
 import streamlit as st
 import pickle
 import numpy as np
+from tensorflow.keras.models import load_model
 
-# Load model
-with open("diabetes_ann_model.h5", "rb") as f:
-    model = pickle.load(f)
+model = load_model("diabetes_ann_model.h5")
+
 
 # Load scaler
 with open("scaler(2).pkl", "rb") as f:
